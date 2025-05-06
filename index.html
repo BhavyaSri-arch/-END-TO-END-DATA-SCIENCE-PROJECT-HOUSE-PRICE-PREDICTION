@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Predictor</title>
+</head>
+<body>
+    <h2>Enter House Details</h2>
+    <form method="POST" action="/predict">
+        MSSubClass: <input type="number" name="MSSubClass"><br><br>
+        LotFrontage: <input type="number" name="LotFrontage"><br><br>
+        LotArea: <input type="number" name="LotArea"><br><br>
+        OverallQual: <input type="number" name="OverallQual"><br><br>
+        YearBuilt: <input type="number" name="YearBuilt"><br><br>
+        GrLivArea: <input type="number" name="GrLivArea"><br><br>
+        <input type="submit" value="Predict Price">
+    </form>
+
+    {% if prediction %}
+        <h3>Predicted Price: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
